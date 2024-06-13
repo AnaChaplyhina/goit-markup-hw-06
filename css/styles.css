@@ -89,7 +89,7 @@ margin-right: auto;
       stroke: #2F2F37;
   }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .container {
         max-width: 768px;
     }
@@ -201,7 +201,7 @@ margin-right: auto;
 
 }
 
-@media screen and (min-width: 1158px) {
+@media (min-width: 1158px) {
     .container {
         max-width: 1158px;
         padding: 0 15px;
@@ -244,28 +244,94 @@ margin-right: auto;
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
     ),
-    url(/goit-markup-hw-04/images/people-office.jpg);
+    url(/goit-markup-hw-06/images/background-mobile-1x-min.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 188px;
-    padding-bottom: 188px;
-    max-width: 1440px;
     margin: 0% auto;
-   
+   max-width: 320px;
+   padding-top: 72px;
+   padding-bottom: 72px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    .main-title-page {
+        background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url(/goit-markup-hw-06/images/background-mobile-2x-min.jpg);
+    }
 }
 
 .main-title {
     font-weight: 700;
-    font-size: 56px;
+    font-size: 36px;
     text-align: center;
-    line-height: 1.07;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     color: #fff;
-    max-width: 496px;
+    max-width: 216px;
     margin-left: auto;
     margin-right: auto;
     
+}
+
+@media (min-width: 768px) {
+    .main-title-page {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(/goit-markup-hw-06/images/background-tablet-1x-min.jpg);
+        padding-top: 112px;
+        padding-bottom: 112px;
+        max-width: 768px;
+    }
+
+    .main-title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+    }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 2dppx),
+        (min-resolution: 192dpi) {
+            .main-title-page {
+                background-image: linear-gradient(to bottom,
+                        rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(/goit-markup-hw-06/images/background-tablet-2x-min.jpg);
+            }
+        }
+}
+
+@media (min-width: 1158px) {
+    .main-title-page {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(/goit-markup-hw-06/images/people-office.jpg);
+        padding-top: 188px;
+        padding-bottom: 188px;
+        max-width: 1440px;
+    }
+
+    .main-title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+    }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 2dppx),
+        (min-resolution: 192dpi) {
+            .main-title-page {
+                background-image: linear-gradient(to bottom,
+                        rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(/goit-markup-hw-06/images/people-office-2x-min.jpg);
+            }
+        }
 }
 
 .main-button {
