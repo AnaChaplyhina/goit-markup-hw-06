@@ -28,10 +28,21 @@ ul,ol {
 
 .container {
 max-width: 320px;
-padding-left: 16px;
-padding-right: 16px;
-margin-left: auto;
-margin-right: auto;
+padding: 0 16px;
+margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
 }
 
 .header {
@@ -77,6 +88,15 @@ margin-right: auto;
     text-decoration: none;
 }
 
+.list-header {
+    display:none;
+}
+
+.address {
+    font-style: normal;
+    margin-left: auto;
+    display: none;
+}
 .open-menu-btn {
     padding: 0;
     line-height: 0;
@@ -90,9 +110,13 @@ margin-right: auto;
   }
 
 @media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
+    .open-menu-btn {
+        display: none;
+        }
+
+    .logo {
+        margin-right: 120px;
+        }
 
     .list-header {
         display: flex;
@@ -101,10 +125,6 @@ margin-right: auto;
 
     .address {
         display: block;
-    }
-
-    .logo {
-        margin-right: 120px;
     }
 
     .list-header {
@@ -155,6 +175,12 @@ margin-right: auto;
         color: #2E2F42;
         display: block;
     }
+    
+    .list-address {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
 
     .address {
         display: none;
@@ -189,23 +215,10 @@ margin-right: auto;
         text-decoration: none;
     }
 
-    .list-address {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .open-menu-btn {
-     display: none;
-    }
-
 }
 
 @media (min-width: 1158px) {
-    .container {
-        max-width: 1158px;
-        padding: 0 15px;
-    }
+    
 .logo {
     margin-right: 76px;
 }
@@ -371,12 +384,8 @@ margin-right: auto;
 
 /* #region second section */
 .second-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-.advantage {
-    margin-bottom: 8px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .visually-hidden {
@@ -390,7 +399,6 @@ margin-right: auto;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-    
 }
 
 .benefits-icon {
@@ -403,26 +411,93 @@ margin-right: auto;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     margin-bottom: 8px;
-
+    display: none;
 }
-.list-benefits {
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    display: flex;
-    gap: 24px;
 
+.list-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .benefits {
-    width: calc((100% - 72px) / 4);
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .advantage {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+    .benefits-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    width: 264px;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: none;
+    }
+        
+    .list-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+    .benefits {
+    flex: 1 1 calc(33.333% - 24px);
+    }
+}
+
+@media (min-width: 1158px) {
+    .second-section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .benefits-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        width: 264px;
+        background-color: #f4f4fd;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        }
+
+    .advantage {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .list-benefits {
+        display: flex;
+        gap: 24px;
+    }
+
+    .benefits {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+
+    
 }
 
 /* #endregion second section */
