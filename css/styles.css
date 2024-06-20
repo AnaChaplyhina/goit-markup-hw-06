@@ -44,7 +44,6 @@ margin: 0 auto;
 @media screen and (min-width: 1158px) {
     .container {
     max-width: 1158px;
-    
     }
 }
 
@@ -111,10 +110,11 @@ margin: 0 auto;
     .list-header {
         display: flex;
         gap: 40px;
-       
     }
 
-    .link-nav-stud .link-nav-port .link-nav-cont {
+    .link-nav-stud,
+    .link-nav-port,
+    .link-nav-cont {
         color: #2e2f42;
             font-size: 16px;
             font-weight: 500;
@@ -123,7 +123,6 @@ margin: 0 auto;
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
             padding: 24px 0;
             display: block;
-            
     }
 
     a {
