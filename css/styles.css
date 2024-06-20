@@ -14,8 +14,11 @@ p {
     margin-bottom: 0; 
 }
 
+
 img {
     display: block;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 ul,ol {
@@ -28,7 +31,7 @@ ul,ol {
 
 .container {
 max-width: 320px;
-padding: 0 16px;
+padding: 16px 0;
 margin: 0 auto;
 }
 
@@ -70,7 +73,7 @@ margin: 0 auto;
     text-transform: uppercase;
     color: #4d5ae5;
     text-decoration: none;
-    padding: 17px 0;
+   
 }
 
 .logo-tech {
@@ -93,6 +96,7 @@ margin: 0 auto;
     background-color: transparent;
     cursor: pointer;
     border: none;
+   
 }
 
 @media screen and (min-width:768px) {
@@ -107,6 +111,7 @@ margin: 0 auto;
     .list-header {
         display: flex;
         gap: 40px;
+       
     }
 
     .link-nav-stud .link-nav-port .link-nav-cont {
@@ -115,10 +120,14 @@ margin: 0 auto;
             font-weight: 500;
             line-height: 1.5;
             letter-spacing: 0.02em;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
             padding: 24px 0;
             display: block;
-            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none;
+            
+    }
+
+    a {
+        text-decoration: none;
     }
 
     .list-header:hover {
@@ -190,7 +199,6 @@ margin: 0 auto;
 }
 
 
-
 /* #endregion header */
 
 /* #region modal section */
@@ -211,6 +219,7 @@ margin: 0 auto;
     opacity: 1;
     pointer-events: auto;
 }
+
 .modal-menu {
     position: absolute;
     width: 100%;
@@ -330,7 +339,6 @@ margin: 0 auto;
     display: flex;
     gap: 24px;
     flex-direction: column;
-    /* margin-top: 168px; */
 }
 
 .menu-address-list-contact-a {
@@ -1120,6 +1128,7 @@ padding-bottom: 96px;
         display: flex;
         gap: 72px 24px;
         flex-wrap: wrap;
+        flex-direction: row;
     }
 
     .logo-footer {
@@ -1149,6 +1158,7 @@ padding-bottom: 96px;
     .text-form-footer {
         text-align: left;
     }
+
 }
 
 @media screen and (min-width: 1158px) {
